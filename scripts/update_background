@@ -1,0 +1,5 @@
+#!/bin/bash
+files=(~/Pictures/wallpapers/*)
+COMIC=$(printf "%s\n" "${files[RANDOM % ${#files[@]}]}")
+feh -B white --bg-fill $COMIC 
+echo $COMIC > ~/.latest_comic
