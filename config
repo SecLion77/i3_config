@@ -244,7 +244,7 @@ exec clipit
 exec CopyAgent
 # Start screensaver. Setting are in .xscreensaver
 #exec xscreensaver -no-splash
-exec --no-startup-id xautolock -time 15 -locker -detectsleep "gnome-screensaver-command --lock"  
+exec --no-startup-id xautolock -time 15 -detectsleep -locker "gnome-screensaver-command --lock"  
 # Start the dameon which makes everything (key's) working smoothly
 exec --no-startup-id /usr/bin/gnome-settings-daemon
 # Networking applet
