@@ -10,5 +10,8 @@ Change BAT1 in the correct battery indicator.....
 dconf write /org/gnome/settings-daemon/plugins/cursor/active false
 
 # fix nautilus to use with i3wm
-add aliase nautilus = 'nautilus --no-desktop'
+addi -  alias nautilus = 'nautilus --no-desktop'
+
+# Set GTK theme with
+lxappearance
 
