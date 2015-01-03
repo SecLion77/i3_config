@@ -240,7 +240,7 @@ bindsym XF86Calculator exec gnome-calculator
 # startup programs
 # Set background image
 exec ~/.i3/scripts/update_background
-exec clipit
+#exec clipit
 exec CopyAgent
 # Start screensaver. Setting are in .xscreensaver
 #exec xscreensaver -no-splash
@@ -248,9 +248,9 @@ exec --no-startup-id xautolock -time 15 -detectsleep -locker "gnome-screensaver-
 # Start the dameon which makes everything (key's) working smoothly
 exec --no-startup-id /usr/bin/gnome-settings-daemon
 # Networking applet
-exec nm-applet
+#exec nm-applet
 # bluetooth applet
-exec blueman-applet
+#exec blueman-applet
 # Set sound to 20% aut startup
 exec amixer set Master 20%
 # autmount USB devices
@@ -258,6 +258,7 @@ exec --no-startup-id devmon &
 # keys
 exec --no-startup-id gnome-keyring-daemon
 exec --no-startup-id export $(gnome-keyring-daemon)
+exec --no-startup-id gnome-panel
 # Start at login
 exec --no-startup-id i3-msg 'workspace 1; exec i3-sensible-terminal'
 
