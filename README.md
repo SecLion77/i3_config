@@ -1,5 +1,5 @@
-I3_config
-=========
+I3 Tiling WindowManager Setup
+=============================
 
 Configuration files for using the tiling I3 windowmanager.
 
@@ -16,12 +16,12 @@ Configuration is based on:
 - https://mke21.wordpress.com/category/nerdy-linux/i3wm/
 - http://feeding.cloud.geek.nz/posts/creating-a-modern-tiling-desktop-environment-using-i3/
 - https://github.com/benkaiser/i3-wm-config
-
+- http://blog.kaiserapps.com/2014/02/my-killer-i3-setup.htmlA
 
 I3 with GNOME
 =============
 
-For using I3 with GNOME use the scripts in .i3/gnome_install/
+For using I3 with GNOME use the scripts in '.i3/gnome_install/'
 and run : sudo make install.
 
 To disable to bottom panel use dconf-editor (sudo apt-get install dconf-editor)
