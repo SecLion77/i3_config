@@ -13,6 +13,7 @@ set $mod Mod4
 set $control ~/.i3/scripts/workspace_controller.py
 
 set $dir ~/.i3/
+set $pictures_folder /home/hj/Pictures
 
 # ========  Keyboard and language ============
 # Switch Caps / Esc 
@@ -49,8 +50,8 @@ bindsym $mod+p exec $control open
 # dynamic tagging feature
 # bindsym $mod+t exec ~/.i3/get_workspace_options.py | dmenu -b | ~/.i3/go_to_workspace.py
 # bindsym $mod+Shift+t exec ~/.i3/get_workspace_options.py | dmenu -b | ~/.i3/move_to_workspace.py
-bindsym $mod+t exec $control dynamic go
-bindsym $mod+Shift+t exec $control dynamic move
+#bindsym $mod+t exec $control dynamic go
+#bindsym $mod+Shift+t exec $control dynamic move
 
 # change focus
 bindsym $mod+h focus left
@@ -91,8 +92,8 @@ bindsym $mod+f fullscreen
 bindsym $mod+Shift+g fullscreen global
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
+bindsym $mod+w layout stacking
+bindsym $mod+t layout tabbed
 bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
@@ -108,10 +109,10 @@ bindsym $mod+a focus parent
 bindsym $mod+d focus child
 
 # scratchpad
-bindsym $mod+Shift+minus move scratchpad
+bindsym $mod+Shift+s move scratchpad
 
 # Show the first scratchpad window
-bindsym $mod+minus scratchpad show
+bindsym $mod+s scratchpad show
 
 # switch to workspace
 bindsym $mod+1 exec $control go 1
@@ -150,6 +151,10 @@ bindsym $mod+Shift+R restart
 # exit i3
 bindsym $mod+Shift+E exec $dir/scripts/i3-exit
 bindsym XF86PowerOff exec $dir/scripts/i3-exit
+
+# Custom key-bindings
+bindsym $mod+n exec nautilus --no-desktop &
+
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -237,6 +242,9 @@ bindsym XF86Calculator exec gnome-calculator
 #bindsym XF86MonBrightnessDown exec $dir/backlight_less
 #bindsym XF86MonBrightnessUp   exec $dir/backlight_more
 
+# screenshot
+bindsym --release Print exec --no-startup-id scrot -e 'mv $f $pictures_folder/Scrot/$f'
+
 # startup programs
 # Set background image
 exec ~/.i3/scripts/update_background
@@ -261,6 +269,9 @@ exec --no-startup-id export $(gnome-keyring-daemon)
 exec --no-startup-id gnome-panel
 # Start at login
 exec --no-startup-id i3-msg 'workspace 1; exec i3-sensible-terminal'
+# Start power management
+# DPMS monitor settings (standby(10 min)) (secondes)
+exec --no-startup-id xset dpms 600
 
 # open certain windows in floating mode
 for_window [class="(?i)gnome-calculator"] floating enable
