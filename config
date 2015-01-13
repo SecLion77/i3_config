@@ -245,6 +245,18 @@ bindsym XF86Calculator exec gnome-calculator
 # screenshot
 bindsym --release Print exec --no-startup-id scrot -e 'mv $f $pictures_folder/Scrot/$f'
 
+# Floating window size
+floating_minimum_size 80 x 50
+floating_maximum_size 800 x 400
+
+# assigments
+for_window [class="Vlc"] floating enable 
+for_window [class="Vlc"] borders 1pixel 
+for_window [class="Audacity"] floating enable 
+for_window [class="Audacity"] borders 1pixel 
+for_window [class="Virtualbox"] floating enable 
+for_window [class="Virtualbox"] borders 1pixel 
+
 # startup programs
 # Set background image
 exec ~/.i3/scripts/update_background
