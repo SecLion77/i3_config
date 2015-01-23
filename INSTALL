@@ -1,6 +1,6 @@
 ## INSTALL for I3WM
 
-sudo apt-get install i3 conky acpi feh xautolock lxappearance clipit udevil blueman
+sudo apt-get install i3 conky acpi feh xautolock lxappearance clipit udevil blueman scrot
 
 # Adjust conkyrc.conf
 
@@ -10,8 +10,14 @@ Change BAT1 in the correct battery indicator.....
 dconf write /org/gnome/settings-daemon/plugins/cursor/active false
 
 # fix nautilus to use with i3wm
-addi -  alias nautilus = 'nautilus --no-desktop'
+add -  alias nautilus = 'nautilus --no-desktop'
 
 # Set GTK theme with
 lxappearance
+
+# Add the following directorie
+# Put here you wallpapers
+mkdir ~/Pictures/wallpapers
+# Your screenshots go to this directorie
+mkdir ~/Pictures/Scrot
 

@@ -185,7 +185,7 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
         status_command ~/.i3/scripts/conky-wrapper.sh
-        tray_output primary
+        font pango:DejaVu Sans Mono 9
         colors {
                 background #232323
                 separator  #DCDCDC
@@ -288,4 +288,8 @@ exec --no-startup-id xset dpms 600
 # open certain windows in floating mode
 for_window [class="(?i)gnome-calculator"] floating enable
 for_window [class="Skype"] floating enable
+for_window [class="Firefox"] floating enable
+for_window [class="VirtualBox"] floating enable
+for_window [class="Gimp"] floating enable
+for_window [class="qemu"] floating enable
 
