@@ -12,6 +12,9 @@
 set $mod Mod4
 set $control ~/.i3/scripts/workspace_controller.py
 
+# auto resize window when using vmware-tools
+exec --no-startup-id vmware-user
+
 set $dir ~/.i3/
 set $pictures_folder /home/hj/Pictures
 
